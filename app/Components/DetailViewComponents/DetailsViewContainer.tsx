@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import BackDrop from "./BackDrop";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowLeftIcon } from "@heroicons/react/24/outline";
+import { ArrowLeft } from "lucide-react";
 import DetailTabs from "./DetailsTabs";
 import { getPokemon } from "@/lib/PokeActions";
 import { useDetailViews } from "@/app/Contexts/DetailViewContext";
@@ -49,7 +49,7 @@ const DetailsView = ({ visible, handleClose }: DetailsViewProps) => {
               onClick={handleClose}
               className="h-[3rem] w-[3rem] bg-white shadow-xl rounded-lg flex items-center justify-center cursor-pointer"
             >
-              <ArrowLeftIcon className="text-black h-3 w-3" />
+              <ArrowLeft className="text-black h-3 w-3" />
             </div>
             <div className="flex justify-center">
               <Image
