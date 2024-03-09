@@ -39,7 +39,7 @@ const CardList = () => {
     <>
       {loading && (
         <div
-          className={`${theme} w-full h-screen flex flex-col justify-center items-center text-primary text-4xl font-semibold`}
+          className={`${theme} w-full h-screen flex flex-col p-20 items-center text-primary heading1 gap-10`}
         >
           <Logo />
           <h2 className="text-center">Fetching data...</h2>

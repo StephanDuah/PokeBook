@@ -1,9 +1,6 @@
-import Image from "next/image";
 import Logo from "./Components/Logo";
 import Name from "./Components/Name";
 import SearchBar from "./Components/SearchBar";
-import Link from "next/link";
-import DominantColor from "./Components/DetailViewComponents/DominantColor";
 
 export default function Home() {
   return (
