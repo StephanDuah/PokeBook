@@ -1,5 +1,5 @@
 import React from "react";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { SearchIcon } from "lucide-react";
 import Link from "next/link";
 const SearchBar = () => {
   return (
@@ -14,7 +14,7 @@ const SearchBar = () => {
           href={"/ListView"}
           className="text-lg rounded-full p-[14px] shadow-xl bg-primary text-white"
         >
-          <MagnifyingGlassIcon className="h-5 w-5 " />
+          <SearchIcon className="h-5 w-5 " />
         </Link>
       </div>
       <Link className="body2 underline" href={"/ListView"}>

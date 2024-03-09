@@ -1,5 +1,5 @@
 "use client";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { SearchIcon } from "lucide-react";
 import React from "react";
 import Logo from "../../Logo";
 
@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className="hidden md:flex">
         {" "}
         <div className="flex justify-between items-center p-2 px-4 gap-1  rounded-full border border-gray-300 shadow-lg ">
-          <MagnifyingGlassIcon className="h-4 w-4 text-gray-500" />
+          <SearchIcon className="h-4 w-4 text-gray-500" />
           <input
             className="outline-none bg-transparent text-sm px-4 min-w-[300px]"
             name="searchBar"

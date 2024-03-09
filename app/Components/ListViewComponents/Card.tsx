@@ -1,10 +1,9 @@
 "use client";
 import Image from "next/image";
-import { EyeIcon } from "@heroicons/react/24/solid";
+import { EyeIcon } from "lucide-react";
 import { useDetailViews } from "@/app/Contexts/DetailViewContext";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { useTheme } from "next-themes";
 
 type PokemonCardProps = {
   pokemon: {
