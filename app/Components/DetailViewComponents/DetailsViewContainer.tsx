@@ -5,24 +5,12 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { BackspaceIcon } from '@heroicons/react/24/solid';
 import DetailTabs from './DetailsTabs';
-import { getPokemon } from '@/app/lib/PokeActions';
+import { getPokemon } from '@/lib/PokeActions';
 import { useDetailViews } from '@/app/Contexts/DetailViewContext';
 import DominantColor from './DominantColor';
+import { DetailsViewProps,  PokemonData } from '@/lib/@/types';
 
-export interface PokemonData {
-  name: string;
 
-  abilities: {ability:{name:string}} [];
-  weight:string,
-  height:string
-  image:string,
-  stats:{name:string,points:number}[]
-}
-
-type DetailsViewProps = {
-  visible: boolean;
-  handleClose: () => void;
-};
 
 const DetailsView = ({ visible, handleClose }:DetailsViewProps) => {
   const [pokemonData, setPokemonData] = useState<PokemonData | null>(null);

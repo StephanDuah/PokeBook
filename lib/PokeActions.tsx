@@ -1,6 +1,6 @@
 'use server'
 
-////
+
 interface PokemonResult {
   name: string
   url: string
@@ -30,22 +30,6 @@ export const getPokemons2 = async (urls: string[]) => {
     }))
     return pokemons2
 }
-
-// export const getPokemons = async () => {
-    
-
-//     let pokemons = []
-//      for(var i = 1; i <= 500; i++){
-//        const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
-//        const {id,abilities,name,height,weight,sprites} = await data.json()
-//        const image = sprites.other.dream_world.front_default
-//        pokemons.push({id,abilities,name,height,weight,image})
-//      }
-  
-//      console.log(pokemons)
-//      return pokemons
-        
-// } 
 
 export const getPokemon = async (id:any) => {
  

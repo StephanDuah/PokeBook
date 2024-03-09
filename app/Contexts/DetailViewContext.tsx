@@ -1,15 +1,8 @@
 'use client'
 import React, { createContext, useState, useContext } from 'react';
+import { DetailViewsContextType } from '../../lib/@/types';
 
-// Define types for context values
-interface DetailViewsContextType {
-  visibleDetailView: boolean;
-  id: number | null;
-  openDetailView: (id: number) => void;
-  closeDetailView: () => void;
-}
 
-// Create a context for managing detail views
 export const DetailViewsContext = createContext<DetailViewsContextType | undefined>(undefined);
 
 // Custom hook to access the DetailViewsContext

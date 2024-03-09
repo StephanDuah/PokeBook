@@ -4,6 +4,7 @@ import { EyeIcon } from '@heroicons/react/24/solid';
 import { useDetailViews } from '@/app/Contexts/DetailViewContext';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { useTheme } from 'next-themes';
 
 type PokemonCardProps = {
   pokemon: {
@@ -15,13 +16,17 @@ type PokemonCardProps = {
   };
 };
 
+
+
 const Card = ({ pokemon }: PokemonCardProps) => {
   const { openDetailView } = useDetailViews();
   const [isHovered, setIsHovered] = useState(false);
+  
+  
 
   return (
     <motion.div
-      className='group w-full h-[] bg-white p-4 flex-col flex justify-center items-center relative rounded-xl cursor-pointer'
+      className={`group w-full h-[]  bg-white p-4 flex-col flex justify-center items-center relative rounded-xl cursor-pointer`}
       initial={{ height: '283px' }}
       whileHover={{ height: '379px' }}
       onMouseEnter={() => setIsHovered(true)}
@@ -38,12 +43,12 @@ const Card = ({ pokemon }: PokemonCardProps) => {
         onClick={() => openDetailView(pokemon.id)}
         className={`${
           isHovered ? 'flex' : 'hidden'
-        } group-hover:flex  items-center bg-primary justify-between opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition duration-200 w-full rounded-xl p-4 text-white cursor-pointer`}
+        }  items-center bg-primary justify-between  w-full rounded-xl p-4 text-primary-foreground cursor-pointer`}
         initial={{ opacity: 0, translateY: 8 }}
         animate={{ opacity: isHovered ? 1 : 0, translateY: isHovered ? 0 : 8 }}
       >
         <h4>View Pokemon</h4>
-        <EyeIcon className='h-4 w-4 text-white' />
+        <EyeIcon className='h-4 w-4 text-primary-foreground' />
       </motion.div>
     </motion.div>
   );

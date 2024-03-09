@@ -1,9 +1,7 @@
 import React from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { PokemonData } from './DetailsViewContainer'
-type DetailTabsProps = {
- pokemon: PokemonData
-}
+import { DetailTabsProps, PokemonData } from '@/lib/@/types'
+
 const DetailTabs = ({pokemon}:DetailTabsProps) => {
     const tabs = ['about','stats','simillar']
   return (
@@ -45,7 +43,7 @@ const DetailTabs = ({pokemon}:DetailTabsProps) => {
           <div className='flex items-center gap-2'>
               
              {/* This block of code */}
-            <div className='w-[189px] h-2 bg-gray-600'>
+            <div className='w-[189px] h-2 bg-gray-400'>
               <div className={`h-2 bg-primary`} style={
                 {width: stat.points}
               }>
@@ -62,8 +60,8 @@ const DetailTabs = ({pokemon}:DetailTabsProps) => {
       </div>
       </div>
      </TabsContent>
-    {/* similar tab */}
-     <TabsContent value="simillar">Change your password here.</TabsContent>
+
+    {/* similar tab */}    <TabsContent value="simillar">Change your password here.</TabsContent>
 
      <TabsList className='py-8 rounded-full bg-gray-200 px-2 shadow-inner'>
      <TabsTrigger className='py-[12px] px-[40px] rounded-full  drop-shadow-md' value="about">
