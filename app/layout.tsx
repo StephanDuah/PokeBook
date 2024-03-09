@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 
-import { ThemeProvider } from "@/app/Contexts/ThemeProvider"
+import { ThemeProvider } from "@/app/Contexts/ThemeProvider";
 import { DetailViewProvider } from "./Contexts/DetailViewContext";
 
 export const metadata: Metadata = {
@@ -16,22 +16,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning lang="en" >
-      <body >
-    
-         <ThemeProvider
-         attribute="class"
-        
-       
-         themes={['pink','yellow','blue']}
-      
-         >
-          <DetailViewProvider>
-          {children} 
-          </DetailViewProvider>
-          </ThemeProvider>  
-           
-</body>
+    <html suppressHydrationWarning lang="en">
+      <body>
+        <ThemeProvider attribute="class" themes={["pink", "yellow", "blue"]}>
+          <DetailViewProvider>{children}</DetailViewProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

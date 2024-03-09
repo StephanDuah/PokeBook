@@ -7,14 +7,12 @@ import DominantColor from "./Components/DetailViewComponents/DominantColor";
 
 export default function Home() {
   return (
-   <main className="flex flex-col w-full h-screen items-center justify-center space-y-[5rem] p-5">
-    
-    <div className="flex flex-col w-full justify-center items-center">
-    <Logo />
-     <Name />
-     </div> 
-     <SearchBar />
-     <Link href={'/ListView'} >View All</Link>
-   </main>
+    <main className="flex flex-col w-full h-screen items-center justify-center space-y-10 p-5">
+      <div className="flex flex-col w-full justify-center items-center gap-10">
+        <Logo />
+        <Name />
+      </div>
+      <SearchBar />
+    </main>
   );
 }
